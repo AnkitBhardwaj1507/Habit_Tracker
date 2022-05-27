@@ -1,0 +1,349 @@
+/*-------- common styling for the page-------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: hsl(227, 58%, 95%);
+}
+
+/*-------- navbar contianer------- */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    height: 54px;
+    width: 100%;
+    background-color: #317773;
+}
+
+/*------- logo of the website----- */
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-------- logo image ----- */
+.nav-logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/*----------- user name and logout button contianer ------------*/
+.user-info {
+    padding-right: 30px;
+    font-size: 20px;
+    color: #E2D1F9;
+}
+
+/*--------- adding new habit container--------*/
+.new-task {
+    margin-top: 5rem;
+    box-sizing: border-box;
+    width: 60%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 18rem;
+}
+
+/*-------- input and add button container ---------*/
+.new-task-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*-------- new habit input --------*/
+.new-task-input input {
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: transparent;
+}
+
+.new-task-input input::placeholder {
+    padding: 10px;
+    margin: 20px;
+}
+
+/*--------- add habbit button-------- */
+.new-task-input button {
+    width: 8rem;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #317773;
+}
+
+.new-task-input button:hover {
+    cursor: pointer;
+}
+
+/*-------- task view contianer--------- */
+.view-container {
+    display: flex;
+    margin-top: 4rem;
+    box-sizing: border-box;
+    width: 60%;
+    margin-left: 18rem;
+}
+
+/*------------ Daily and weekly button-------- */
+.view-container button  {
+    font-size: 20px; 
+    background: #fff;
+    padding: 10px;
+    margin-right: 13px;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+/*-------- styling for active tabs-------- */
+.view-btn-active {
+    background: #2185d0 !important;
+    color: white;
+}
+
+.header {
+    margin: 8px 0px;
+    margin-left: 18rem;
+}
+
+.view-container button:hover {
+    cursor: pointer;
+    background: #e1e1e1;
+    
+}
+
+/*------------ task list container-------- */
+.task-list-container {
+    box-sizing: border-box;
+    width: 60%;
+    margin-left: 18rem;
+    border-radius: 7px;
+    max-height: 350px;
+    position: absolute;
+    overflow: hidden;
+    overflow-y:auto;
+}
+
+/*------ To hide the scrollbar----- */
+.task-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+/*-------- Each task list item------ */
+.task-list-items {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    justify-content: space-between;
+    margin-left: -2.5rem;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    list-style: none;
+    object-fit:fill;
+}
+
+/*---------- task description container ------- */
+.task-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #116466;
+    padding: 10px;
+}
+
+/*---------- Task description/title ----------- */
+.desc {
+    padding-left: 20px;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 20px;
+    color: #C1C8E4;
+    width: 50%;
+    overflow-wrap: break-word;
+    padding-right: 20px;
+}
+
+/*--------- for daily view tab---------- */
+.daily-view-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-top: none;
+    border-radius: 0px 0px 7px 7px;
+    background-color: #ade2c8;
+    padding-left: 2rem;
+}
+
+/*----------- delete button in the item list ---------- */
+.delete-btn {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    margin-right: 2rem;
+    background-color: #317773;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/*------- delete button icon------ */
+.delete-btn i {
+    margin-right: 8px;
+}
+
+/*-------- for weekly view tab contianer-------- */
+.weekly-view-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: visible;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%;
+    border-top: none;
+    border-radius: 0px 0px 7px 7px;
+    flex-wrap:nowrap;
+}
+
+.weekly-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-bottom: none;
+    margin-top: none;
+    width: 25%;
+    padding: 0px 1rem;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.weekly-status {
+    font-size: 25px;
+}
+
+/*------- Date of task -------- */
+.task-date {
+    font-size: 1.5vw;
+    font-weight: 450;
+}
+
+.daily-status {
+    padding: 10px;
+    margin-right: 3rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .new-task {
+        margin-left: 8rem;
+    }
+
+     .view-container {
+        margin-left: 8rem;
+    }
+
+    .header {
+        margin-left: 8rem;
+    }
+
+    .task-list-container {
+        margin-left: 8rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .new-task {
+        margin-left: 8rem;
+    }
+
+    .view-container {
+        margin-left: 8rem;
+    }
+
+    .header {
+        margin-left: 8rem;
+    }
+
+    .task-list-container {
+        margin-left: 8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .new-task {
+        margin-left: 8rem;
+    }
+
+    .header {
+        margin-left: 8rem;
+    }
+
+    .task-list-container {
+        margin-left: 8rem;
+    }
+
+    .weekly-view {
+        padding: 2px
+    }
+
+    .weekly-status {
+        font-size: 22px;
+    }
+
+    .daily-status {
+        margin-right: 1rem;
+    }
+
+    .text-center {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .new-task {
+        margin-left: 8rem;  
+    }
+
+    .header {
+        margin-left: 8rem;
+    }
+
+    .task-list-container {
+        margin-left: 8rem;
+    }
+
+    .desc {
+        font-size: 15px;
+    }
+
+    .delete-btn {
+        font-size: 15px;
+        margin-right: 0;
+    }
+
+    .weekly-status {
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/signup.css">
+
+<div class="signup-container">
+    <div class="heading">
+        <h1>Habit Tracker</h1>
+    </div>
+    
+    <div class="signup">
+        Sign Up
+    </div>
+    <div class="error-message">
+        <%- include('./partials/_error_messages') %>
+    </div>
+    
+    <form action="/user/create-user" method="POST" class="signup-form">
+        <div class="field">
+            <div class="register-container">
+                <input type="text" id="name" name="name" required placeholder="Name"
+                value="<%= typeof name != undefined ? name : '' %>" />
+            </div>
+
+            <div class="register-container">
+                <input type="email" id="email" name="email" required placeholder="Email"
+                value="<%= typeof(email) != undefined ? email : '' %>" />
+            </div>
+
+            <div class="password">
+                <input type="password" name="password" id="password" placeholder="Password" required />
+            </div>
+
+            <div class="confirmPassword">
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+            </div>
+        </div>
+
+        <button type="submit" class="signup-button">
+            Sign Up
+        </button>
+    </form>
+
+    <p class="signin">Already have an account ? &nbsp <a href="/">Log In</a></p>
+    
+</div>

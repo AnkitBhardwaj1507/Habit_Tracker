@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/profile.css">
+
+<% title = "Habit Tracker - Profile" %>
+
+<%- include('./partials/_navbar') %>
+
+<form action="/tasks/create-task?id=<%= userId%>" method="post" class="new-task">
+    <div class="new-task-input">
+        <input type="text" name="desc" placeholder="Adding a new task..." required>
+        <button type="submit" id="add-btn">Add Task</button>
+    </div>
+</form>
+
+<% if(tasks && tasks.length > 0) { %> 
+    
+    <%- include('./partials/_tasks') %>
+    
+<% } %>

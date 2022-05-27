@@ -1,0 +1,7 @@
+.alert-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 1rem;
+}
